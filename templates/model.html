@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Income Prediction Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #555;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        h3 {
+            color: #557;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        p {
+            color: #777;
+            line-height: 1.6;
+        }
+        .accuracy {
+            font-weight: bold;
+            color: #27ae60;
+        }
+	.button-container {
+            text-align: center; /* Center the button */
+        }
+        .btn {
+            background-color: #4a77d4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+	    display: inline-block;
+        }
+        .btn:hover {
+            background-color: #3459a1;
+        }
+        .github-link, .linkedin-link {
+            margin-top: 15px;
+        }
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Adult Income Prediction Model</h1>
+
+        <h2>Dataset: Adult Income Dataset</h2>
+        <p>
+            The dataset used is used to predict whether an adult's income exceeds $50,000 per year. 
+            It contains various features including age, workclass, education, marital status, occupation, race, gender, capital gain, 
+            capital loss, hours per week, and native country. The target variable is income, which is binary, indicating whether the 
+            income is less than or equal to $50,000 or greater than $50,000.
+        </p>
+
+        <h2>Model: RandonForestClassifier</h2>
+        <p>
+           A random forest is a meta estimator that fits a number of decision tree classifiers on various sub-samples of the dataset and uses averaging to improve the predictive accuracy and control over-fitting.
+            I have tried using DecisionTreeClassifier previously which provided slighly less accuracy so, I went for the RFC.
+        </p>
+
+        <h2>Accuracy Score</h2>
+        <p>
+            The accuracy score of the RandomForestClassifier model on the test set is approximately <span class="accuracy">0.848</span>.
+        </p>
+        <p>
+            The accuracy score of the DecisionTreeClassifier model on the test set is approximately <span class="accuracy">0.837</span>.
+        </p>
+	<h3>Links</h3>
+        <div class="github-link">
+            <p>
+                GitHub Repository: 
+                <a href="https://github.com/dilipkumar08/2025/tree/main/live%20projects/ml/adult%20income%20prediction" target="_blank">
+                    2025/live projects/ml/adult income prediction
+                </a>
+            </p>
+        </div>
+        <div class="linkedin-link">
+            <p>
+                LinkedIn: 
+                <a href="https://www.linkedin.com/in/dilip-kumar-hello-world" target="_blank">
+                    www.linkedin.com/in/dilip-kumar-hello-world
+                </a>
+            </p>
+<div class='button-container'>
+        <a href="http://127.0.0.1:5000" class="btn">Back to Home</a>
+</div>
+        </div>
+    </div>
+</body>
+</html>

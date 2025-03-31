@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income Prediction Result</title>
+    <style>
+        body {
+            background-color: black;
+            color: lightgreen;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .result-box {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 3px solid lightgreen;
+            padding: 30px;
+            margin: 50px auto;
+            width: fit-content;
+            box-shadow: 0 0 20px rgba(0, 255, 0, 0.5);
+            animation: fadeIn 1s ease-out;
+        }
+
+        h2 {
+            color: lime;
+            text-shadow: 0 0 10px rgba(0, 255, 0, 0.8);
+            margin-bottom: 20px;
+        }
+
+        .result-content {
+            display: none;
+            margin-top: 25px;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            animation: slideIn 0.8s ease-out;
+        }
+
+        button {
+            padding: 15px 30px;
+            background-color: lime;
+            color: black;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1em;
+            box-shadow: 0 0 10px rgba(0, 255, 0, 0.7);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(0, 255, 0, 0.9);
+        }
+	
+        .btn {
+            background-color: black;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            text-decoration: none;
+	    display: inline-block;
+	    border: 1px solid white;
+
+        }
+        .btn:hover {
+            background-color: green;
+        }
+
+        .model-link {
+            display: block;
+            margin-top: 30px;
+            color: lightgreen;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .model-link:hover {
+            color: lightcyan;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ctext x='0' y='15' fill='lime' font-size='18'%3E₹</text>%3C/svg%3E");
+            background-repeat: repeat;
+            opacity: 0.2;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h2>Here is your income:</h2>
+        <button id="showHideButton" onclick="toggleResult()">Show</button>
+        <div class="result-content" id="resultContent">
+            <p>{{prediction}}</p>
+        </div>
+    </div>
+
+    <a href="/model" class="model-link">Model Details</a>
+    <script>
+        function toggleResult() {
+            var resultContent = document.getElementById("resultContent");
+            var showHideButton = document.getElementById("showHideButton");
+
+            if (resultContent.style.display === "none") {
+                resultContent.style.display = "block";
+                showHideButton.textContent = "Hide";
+            } else {
+                resultContent.style.display = "none";
+                showHideButton.textContent = "Show";
+            }
+        }
+    </script>
+    <a href="http://127.0.0.1:5000" class="btn">Back to Home</a>
+</body>
+</html>

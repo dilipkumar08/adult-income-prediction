@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Income Prediction</title>
+    <style>
+        body {
+            background-color: black;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ctext x='0' y='15' fill='green' font-size='18'%3E₹</text>%3C/svg%3E");
+            background-repeat: repeat;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            body::before {
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'%3E%3Ctext x='0' y='15' fill='green' font-size='18'%3E₹</text>%3C/svg%3E");
+            }
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: black;
+            color: lightgreen;
+            border-color: white;
+            cursor: pointer;
+            border-radius: 5px;
+	    font-weight:bold;
+        }
+
+        button:hover {
+            background-color: green;
+	    color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Let's Predict Some Income</h1>
+    <button onclick="location.href='details'">Start</button>
+</body>
+</html>
