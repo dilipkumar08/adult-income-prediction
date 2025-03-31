@@ -1,10 +1,10 @@
-from flask import Flask, render_template,request
+from flask import Flask, render_template, request
 import pickle as pkl
 import pandas as pd
 
 app = Flask(__name__)
 
-@app.route('/')
+@app.route('/home')
 def home():
     return render_template('home.html')
 
@@ -70,7 +70,9 @@ def predict():
             'country': [country],
             'education': [education]
         })
-        model=pkl.load(open("D:/2025 coding/projects/adult income ml flask deploy p2/model/adult_income_model.pkl","rb"))
+        model_path="adult_income_model.pkl"
+        with open(model_path,'rb') as file:
+            model=pkl.load(file)
         result=model.predict(input_data)
         if result==0:
             prediction_result="<=50000"
