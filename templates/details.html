@@ -24,29 +24,28 @@
             z-index: -1;
         }
 
-	h1 {
-	    text-align: center;
-	    margin-bottom: 20px;
-	    animation: fadeIn 1s ease-in-out;
-	    background-color: black; 
-	    color: lightgreen;
-	    padding: 15px;
-	    border-radius: 5px;
-	    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
-	    border: 1px solid white;
-	    	
-	}
-	
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: fadeIn 1s ease-in-out;
+            background-color: black; 
+            color: lightgreen;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            border: 1px solid white;
+        }
+        
         .error-message {
             color: red;
-            text-align: center; /* Center the error message */
+            text-align: center;
             margin-bottom: 10px;
-            border: 2px solid white; /* Add a white border */
-            padding: 10px; /* Add some padding for better appearance */
-            border-radius: 5px; /* Optional: Add rounded corners */
-            background-color: black; /* Optional: Add a black background */
-            width: fit-content; /* Make the box fit the content*/
-            margin: 0 auto 10px auto; /* Center the box */
+            border: 2px solid white;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: black;
+            width: fit-content;
+            margin: 0 auto 10px auto;
         }
 
         label {
@@ -54,13 +53,13 @@
             display: block;
             margin-top: 10px;
             text-align: center;
-	    font-weight: bold;
-	    color: lightgreen;
+            font-weight: bold;
+            color: lightgreen;
             transition: color 0.3s ease;
         }
 
         .input-container {
-	    animation: fadeIn 1s ease-in-out;
+            animation: fadeIn 1s ease-in-out;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -68,8 +67,8 @@
         }
 
         input[type="text"], select {
-	    animation: fadeIn 1s ease-in-out;
-            width: 300px; /* Fixed width for all input boxes */
+            animation: fadeIn 1s ease-in-out;
+            width: 300px;
             padding: 8px;
             margin-top: 5px;
             border: 1px solid #ccc;
@@ -86,7 +85,7 @@
         }
 
         button {
-	    animation: fadeIn 1s ease-in-out;
+            animation: fadeIn 1s ease-in-out;
             padding: 10px 20px;
             margin-top: 20px;
             background-color: black;
@@ -96,12 +95,12 @@
             border-radius: 5px;
             transition: background-color 0.3s ease, transform 0.2s ease;
             font-family: 'Verdana', sans-serif;
-	    font-weight: bold;
+            font-weight: bold;
         }
 
         button:hover {
             background-color: green;
-	    color: white;
+            color: white;
             transform: scale(1.05);
         }
 
@@ -117,13 +116,13 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
-	select {
-            width: 312px; /* Fixed width for select elements only */
+        select {
+            width: 312px;
         }
 
         input[type="text"] {
             width: 300px;
-	}
+        }
     </style>
 </head>
 <body>
@@ -135,13 +134,13 @@
         <div class="input-container">
             <label for="age">Age</label>
             <input type="text" name="age" id="age">
-	    <p class="note">(Enter less than 100 anything greater than 100 is considered as 90-100)</p>
-
+            <p class="note">(Enter less than 100 anything greater than 100 is considered as 90-100)</p>
         </div>
 
         <div class="input-container">
             <label for="gender">Gender</label>
             <select name="gender" id="gender">
+                <option value=""></option>
                 <option value="1">Male</option>
                 <option value="2">Female</option>
             </select>
@@ -151,6 +150,7 @@
         <div class="input-container">
             <label for="marital_status">Marital Status</label>
             <select name="marital_status" id="marital_status">
+                <option value=""></option>
                 <option value="1">Single</option>
                 <option value="2">Married</option>
             </select>
@@ -159,6 +159,7 @@
         <div class="input-container">
             <label for="occupation">Occupation</label>
             <select name="occupation" id="occupation">
+                <option value=""></option>
                 <option value="1">Administrative/Clerical</option>
                 <option value="2">Executive/Managerial</option>
                 <option value="3">Cleaning/Maintenance</option>
@@ -179,13 +180,13 @@
         <div class="input-container">
             <label for="hours_per_week">Work Hours per Week</label>
             <input type="text" name="hours_per_week" id="hours_per_week">
-	    <p class="note">(Enter less than 100 anything greater than 100 is considered as 90-100)</p>
-
+            <p class="note">(Enter less than 100 anything greater than 100 is considered as 90-100)</p>
         </div>
 
         <div class="input-container">
             <label for="workclass">Workclass</label>
             <select name="workclass" id="workclass">
+                <option value=""></option>
                 <option value="1">Private</option>
                 <option value="2">Self-emp-not-inc</option>
                 <option value="3">Self-emp-inc</option>
@@ -200,6 +201,7 @@
         <div class="input-container">
             <label for="capital_gain">Capital Gain</label>
             <select name="capital_gain" id="capital_gain">
+                <option value=""></option>
                 <option value="0">0</option>
                 <option value="1">Less than 3000</option>
                 <option value="2">3000 - 50000</option>
@@ -207,9 +209,10 @@
             </select>
         </div>
 
-  <div class="input-container">
+        <div class="input-container">
             <label for="country">Country</label>
             <select name="country" id="country">
+                <option value=""></option>
                 <option value="1">United States</option>
                 <option value="2">Cuba</option>
                 <option value="3">Jamaica</option>
@@ -257,6 +260,7 @@
         <div class="input-container">
             <label for="education">Education</label>
             <select name="education" id="education">
+                <option value=""></option>
                 <option value="1">Preschool</option>
                 <option value="2">1st-4th Grade</option>
                 <option value="3">5th-6th Grade</option>
